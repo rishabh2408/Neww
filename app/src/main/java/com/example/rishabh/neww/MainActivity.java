@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        //code for the recycler view
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
         MyAdapter adapter=new MyAdapter(this,NatureModel.getobjectList());
         recyclerView.setAdapter(adapter);
@@ -24,17 +25,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutmanager);
         recyclerView.setAnimation(new DefaultItemAnimator());
 
-
-
-
-
-
-
-
-
-
-
-
+//code for the floating action button
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Create an icon
@@ -43,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton actionButton = new FloatingActionButton.Builder(this)
                 .setContentView(icon)
+
                 .build();
         SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
         // repeat many times:
         ImageView itemIcon1 = new ImageView(this);
         itemIcon1.setImageResource(R.mipmap.ic_launcher);
+
 
         ImageView itemIcon2 = new ImageView(this);
         itemIcon2.setImageResource(R.mipmap.ic_launcher);
