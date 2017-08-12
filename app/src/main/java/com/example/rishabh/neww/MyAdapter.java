@@ -69,7 +69,7 @@ NatureModel current=objectList.get(position);
         title=(TextView)itemView.findViewById(R.id.Device);
         switchh=(Switch)itemView.findViewById(R.id.Switch);
     }
-    public void setData(NatureModel current,int position)
+    public void setData(NatureModel currentobject,int position)
     {
 this.title.setText(currentobject.getDevice());
 
@@ -78,7 +78,7 @@ this.title.setText(currentobject.getDevice());
 
         this.position=position;
 
- this.currentobject=current;
+ this.currentobject=currentobject;
     }
     }
 }
