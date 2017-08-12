@@ -2,6 +2,9 @@ package com.example.rishabh.neww;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
@@ -11,6 +14,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
+        MyAdapter adapter=new MyAdapter(this,NatureModel.getobjectList());
+        recyclerView.setAdapter(adapter);
+
+        LinearLayoutManager layoutmanager=new LinearLayoutManager(this);
+        layoutmanager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutmanager);
+        recyclerView.setAnimation(new DefaultItemAnimator());
+
+
+
+
+
+
+
+
+
+
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

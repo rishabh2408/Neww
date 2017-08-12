@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.List;
@@ -45,7 +46,7 @@ NatureModel current=objectList.get(position);
     }
     @Override
     public int getItemCount() {
-        return 0;
+        return objectList.size();
     }
 
 
@@ -53,7 +54,7 @@ NatureModel current=objectList.get(position);
     class MyViewHolder extends RecyclerView.ViewHolder
     {
         private TextView title;
-        //add smething here for the switch
+        private Switch switchh;
         private int position;
         private NatureModel currentobject;
 
@@ -66,10 +67,18 @@ NatureModel current=objectList.get(position);
     {
         super(itemView);
         title=(TextView)itemView.findViewById(R.id.Device);
+        switchh=(Switch)itemView.findViewById(R.id.Switch);
     }
     public void setData(NatureModel current,int position)
     {
+this.title.setText(currentobject.getDevice());
 
+        //something for switch 12.41
+        this.switchh.setId(currentobject.getSwitchId());
+
+        this.position=position;
+
+ this.currentobject=current;
     }
     }
 }
