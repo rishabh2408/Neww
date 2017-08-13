@@ -40,13 +40,19 @@ public class MainActivity extends AppCompatActivity {
         SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
         // repeat many times:
         ImageView itemIcon1 = new ImageView(this);
-        itemIcon1.setImageResource(R.mipmap.ic_launcher);
+        itemIcon1.setScaleX(3f);
+        itemIcon1.setScaleY(3f);
+        itemIcon1.setImageResource(R.drawable.ic_stats);
 
 
         ImageView itemIcon2 = new ImageView(this);
+        itemIcon2.setScaleX(3f);
+        itemIcon2.setScaleY(3f);
         itemIcon2.setImageResource(R.mipmap.ic_launcher);
 
         ImageView itemIcon3 = new ImageView(this);
+        itemIcon3.setScaleX(3f);
+        itemIcon3.setScaleY(3f);
         itemIcon3.setImageResource(R.mipmap.ic_launcher);
 
         SubActionButton button1 = itemBuilder.setContentView(itemIcon1).build();
