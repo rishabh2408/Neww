@@ -38,10 +38,12 @@ public class NatureModel {
         int[] switchh=getSwitches();
         String[] devices=getDevices();
         for (int i=0;i<switchh.length; i++)
-        {
+        {//loop till switchh.length
             NatureModel nature=new NatureModel();
-            nature.setSwitchId(switchh[i]);
-            nature.setDevice(devices[i]);
+            // nature.setSwitchId(switchh[i]);
+            // nature.setDevice(devices[i]);
+             nature.setSwitchId(switchh[i]);
+             nature.setDevice(devices[i]);
             dataList.add(nature);
 
         }

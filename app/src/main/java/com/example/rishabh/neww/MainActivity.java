@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 .setContentView(icon)
 
                 .build();
-        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);1
+        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
         // repeat many times:
         ImageView itemIcon1 = new ImageView(this);
         itemIcon1.setImageResource(R.mipmap.ic_launcher);
