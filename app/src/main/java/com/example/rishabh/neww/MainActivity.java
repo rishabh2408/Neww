@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         //code for the recycler view
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
@@ -23,11 +25,10 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager layoutmanager=new LinearLayoutManager(this);
         layoutmanager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutmanager);
-        recyclerView.setAnimation(new DefaultItemAnimator());
+       // recyclerView.setAnimation(new DefaultItemAnimator());
 
-//code for the floating action button
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        //code for the floating action button
         // Create an icon
         ImageView icon = new ImageView(this);
         icon.setImageResource(R.drawable.ic_bookmark_black_24dp);
