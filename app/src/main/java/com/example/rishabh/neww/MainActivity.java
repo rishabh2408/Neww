@@ -7,10 +7,19 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
+import com.example.rishabh.neww.Adapters.MainAdapter;
+import com.example.rishabh.neww.Data.Item;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    public List<Item> list;
+    private MainAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,24 +27,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //code for the recycler view
-        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
-        MyAdapter adapter=new MyAdapter(this,NatureModel.getobjectList());
-        recyclerView.setAdapter(adapter);
 
+        /* MyAdapter adapter=new MyAdapter(this,NatureModel.getobjectList());
+        recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutmanager=new LinearLayoutManager(this);
         layoutmanager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutmanager);
-       // recyclerView.setAnimation(new DefaultItemAnimator());
+        */
 
+        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
+        list=new ArrayList<>();
 
-        //code for the floating action button
-        // Create an icon
+        list.add(new Item("one"));
+        list.add(new Item("two"));
+        list.add(new Item("three"));
+        list.add(new Item("four"));
+        list.add(new Item("five"));
+        adapter=new MainAdapter(list);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //code for the floating action button and create and icon
         ImageView icon = new ImageView(this);
         icon.setImageResource(R.drawable.ic_bookmark_black_24dp);
 
         FloatingActionButton actionButton = new FloatingActionButton.Builder(this)
                 .setContentView(icon)
-
                 .build();
         SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
         // repeat many times:

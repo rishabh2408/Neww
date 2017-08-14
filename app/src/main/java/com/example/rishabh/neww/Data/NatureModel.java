@@ -1,17 +1,13 @@
-package com.example.rishabh.neww;
+package com.example.rishabh.neww.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.support.v7.widget.AppCompatDrawableManager.get;
 
 /**
  * Created by Rishabh on 12-08-2017.
  */
 
 public class NatureModel {
-
-
 
     private String device;
     private int switchid;
@@ -32,6 +28,8 @@ public class NatureModel {
     {
         this.device=device;
     }
+
+
     public static List<NatureModel> getobjectList()
     {
         List<NatureModel> dataList=new ArrayList<>();
@@ -56,7 +54,7 @@ public class NatureModel {
     }
     private static int[] getSwitches()
     {
-int[] switches={1,2,3,4,5,6,7,8,9,10};
+        int[] switches={1,2,3,4,5,6,7,8,9,10};
         return switches;
     }
 }
