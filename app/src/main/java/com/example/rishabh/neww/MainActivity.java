@@ -1,10 +1,12 @@
 package com.example.rishabh.neww;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.example.rishabh.neww.Adapters.MainAdapter;
@@ -60,20 +62,18 @@ public class MainActivity extends AppCompatActivity {
         itemIcon1.setScaleX(3f);
         itemIcon1.setScaleY(3f);
         itemIcon1.setImageResource(R.drawable.ic_stats);
-
+        SubActionButton button1 = itemBuilder.setContentView(itemIcon1).build();
 
         ImageView itemIcon2 = new ImageView(this);
         itemIcon2.setScaleX(3f);
         itemIcon2.setScaleY(3f);
         itemIcon2.setImageResource(R.mipmap.ic_launcher);
+        SubActionButton button2 = itemBuilder.setContentView(itemIcon2).build();
 
         ImageView itemIcon3 = new ImageView(this);
         itemIcon3.setScaleX(3f);
         itemIcon3.setScaleY(3f);
         itemIcon3.setImageResource(R.mipmap.ic_launcher);
-
-        SubActionButton button1 = itemBuilder.setContentView(itemIcon1).build();
-        SubActionButton button2 = itemBuilder.setContentView(itemIcon2).build();
         SubActionButton button3 = itemBuilder.setContentView(itemIcon3).build();
 
         //attach the sub buttons to the main button
@@ -83,6 +83,16 @@ public class MainActivity extends AppCompatActivity {
                 .addSubActionView(button3)
                 .attachTo(actionButton)
                 .build();
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(MainActivity.this,StatsActivity.class);
+                i1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i1);
+                finish();
+            }
+        });
 
     }
 }
