@@ -1,7 +1,6 @@
 package com.example.rishabh.neww;
 import android.os.AsyncTask;
 import android.widget.TextView;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,8 +28,7 @@ public class Client extends AsyncTask<Object, Object, String> {
         try {
             socket = new Socket(dstAddress, dstPort);
 
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(
-                    1024);
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(1024);
             byte[] buffer = new byte[1024];
 
             int bytesRead;
