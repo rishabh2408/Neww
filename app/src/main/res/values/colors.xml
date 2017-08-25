@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#20EFE9</color>
-<color name="colorPrimaryDark">#26E0D3</color>
-<color name="colorAccent">#FF4081</color>
-<color name="ai">#EF4520</color>
-<color name="alert">#FF0000</color>
-<color name="ideal">#20EFBA</color>
-<color name="stats">#68B87A</color>
+    <color name="colorPrimaryDark">#26E0D3</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="ai">#EF4520</color>
+    <color name="alert">#FF0000</color>
+    <color name="ideal">#20EFBA</color>
+    <color name="stats">#68B87A</color>
+
 </resources>
 

@@ -34,6 +34,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ItemViewHolder
             super(itemView);
             tvDevicename= (TextView) itemView.findViewById(R.id.tvDeviceName);
             btnSwitch= (Switch) itemView.findViewById(R.id.btnSwitch);
+
         }
     }
 
